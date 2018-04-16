@@ -1,15 +1,13 @@
 <resources>
-    <string name="app_name">FragmentApp</string>
+    <string name="app_name">Saga "Los Instrumentos Mortales"</string>
 
     <string-array name="Planets">
-        <item>Sun</item>
-        <item>Mercury</item>
-        <item>Venus</item>
-        <item>Earth</item>
-        <item>Mars</item>
-        <item>Jupiter</item>
-        <item>Saturn</item>
-        <item>Uranus</item>
-        <item>Neptune</item>
+        <item>Primer Libro\nCiudad de Hueso</item>
+        <item>Segundo Libro\nCiudad de Ceniza</item>
+        <item>Tercer Libro\nCiudad de Cristal</item>
+        <item>Cuarto Libro\nCiudad de los Angeles Caidos</item>
+        <item>Quinto Libro\nCiudad de las Almas Perdidas</item>
+        <item>Sexto Libro\nCiudad del Fuego Celestial</item>
+
     </string-array>
 </resources>
