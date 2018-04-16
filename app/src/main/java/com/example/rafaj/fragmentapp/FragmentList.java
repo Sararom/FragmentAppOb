@@ -36,22 +36,24 @@ public class FragmentList extends ListFragment implements AdapterView.OnItemClic
         getListView().setOnItemClickListener(this);
     }
 
-
     @Override
     public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
         //Toast.makeText(getActivity(), "Item: " + adapterView.getItemAtPosition(i).toString(), Toast.LENGTH_SHORT).show();
 
+        LosInstrumentosMortales instrumento = new LosInstrumentosMortales(adapterView.getItemAtPosition(i).toString(),i);
+
         if (getResources().getConfiguration().orientation == Configuration.ORIENTATION_PORTRAIT){
             Intent newIntent = new Intent(getActivity().getApplicationContext(), Main2Activity.class);
             newIntent.setAction(Intent.ACTION_SEND);
+            newIntent.putExtra("CDS",instrumento);
             newIntent.setType("text/plain");
-            newIntent.putExtra(Intent.EXTRA_TEXT, adapterView.getItemAtPosition(i).toString());
             startActivity(newIntent);
         }else if(getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE){
             Toast.makeText(getActivity(), "Item: " + adapterView.getItemAtPosition(i).toString(), Toast.LENGTH_SHORT).show();
 
             Bundle bundle = new Bundle();
-            bundle.putString("KEY", adapterView.getItemAtPosition(i).toString());
+
+            bundle.putSerializable("CDS", instrumento);
             FragmentViewer frag = new FragmentViewer();
             frag.setArguments(bundle);
 
