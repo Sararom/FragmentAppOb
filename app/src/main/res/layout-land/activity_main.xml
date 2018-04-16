@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
     android:orientation="horizontal">
 
     <fragment
         android:layout_width="0dp"
         android:layout_weight="1"
         android:layout_height="match_parent"
+        tools:layout="@layout/list_fragment"
         android:name="com.example.rafaj.fragmentapp.FragmentList"
         android:id="@+id/list">
 
@@ -20,7 +21,6 @@
         android:layout_height="match_parent"
         android:orientation="vertical"
         android:id="@+id/viewer">
-
     </LinearLayout>
 
 </LinearLayout>
